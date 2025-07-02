@@ -2,41 +2,56 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Word of Faith Youth Church Design System - Green & Black Theme */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Core Brand Colors - Green & Black Theme */
+    --background: 220 15% 8%;
+    --foreground: 120 50% 95%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 220 15% 10%;
+    --card-foreground: 120 50% 95%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 220 15% 8%;
+    --popover-foreground: 120 50% 95%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Primary - Emerald Green */
+    --primary: 160 84% 39%;
+    --primary-foreground: 220 15% 8%;
+    --primary-glow: 160 84% 55%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Secondary - Deep Forest */
+    --secondary: 160 40% 15%;
+    --secondary-foreground: 120 50% 95%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Accent - Light Green */
+    --accent: 160 60% 25%;
+    --accent-foreground: 120 50% 95%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --muted: 220 15% 12%;
+    --muted-foreground: 120 20% 70%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 120 50% 95%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 220 15% 20%;
+    --input: 220 15% 15%;
+    --ring: 160 84% 39%;
 
-    --radius: 0.5rem;
+    /* Faith-inspired Gradients */
+    --gradient-divine: linear-gradient(135deg, hsl(160 84% 39%), hsl(160 84% 55%));
+    --gradient-sanctuary: linear-gradient(180deg, hsl(220 15% 8%), hsl(220 15% 12%));
+    --gradient-blessing: linear-gradient(45deg, hsl(160 40% 15%), hsl(160 84% 39%));
+
+    /* Sacred Shadows */
+    --shadow-divine: 0 10px 30px -10px hsl(160 84% 39% / 0.3);
+    --shadow-sanctuary: 0 4px 20px hsl(220 15% 5% / 0.5);
+
+    /* Smooth Transitions */
+    --transition-divine: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
 

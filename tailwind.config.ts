@@ -26,7 +26,8 @@ export default {
 				foreground: 'hsl(var(--foreground))',
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
-					foreground: 'hsl(var(--primary-foreground))'
+					foreground: 'hsl(var(--primary-foreground))',
+					glow: 'hsl(var(--primary-glow))'
 				},
 				secondary: {
 					DEFAULT: 'hsl(var(--secondary))',
@@ -68,6 +69,18 @@ export default {
 				md: 'calc(var(--radius) - 2px)',
 				sm: 'calc(var(--radius) - 4px)'
 			},
+			backgroundImage: {
+				'divine': 'var(--gradient-divine)',
+				'sanctuary': 'var(--gradient-sanctuary)',
+				'blessing': 'var(--gradient-blessing)',
+			},
+			boxShadow: {
+				'divine': 'var(--shadow-divine)',
+				'sanctuary': 'var(--shadow-sanctuary)',
+			},
+			transitionTimingFunction: {
+				'divine': 'var(--transition-divine)',
+			},
 			keyframes: {
 				'accordion-down': {
 					from: {
@@ -84,11 +97,21 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'divine-glow': {
+					'0%, 100%': { boxShadow: '0 0 20px hsl(160 84% 39% / 0.3)' },
+					'50%': { boxShadow: '0 0 30px hsl(160 84% 55% / 0.5)' }
+				},
+				'faith-pulse': {
+					'0%, 100%': { transform: 'scale(1)' },
+					'50%': { transform: 'scale(1.05)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'divine-glow': 'divine-glow 2s ease-in-out infinite',
+				'faith-pulse': 'faith-pulse 2s ease-in-out infinite'
 			}
 		}
 	},
