@@ -36,6 +36,12 @@ const Navigation = () => {
           </div>
 
           <div className="flex items-center space-x-2">
+            <Button variant="outline" size="sm" onClick={() => window.location.href = '/hq-dashboard'}>
+              HQ Dashboard
+            </Button>
+            <Button variant="outline" size="sm" onClick={() => window.location.href = '/register-church'}>
+              Register Church
+            </Button>
             <Button variant="outline" size="sm">Sign In</Button>
             <Button variant="default" size="sm">Join Us</Button>
           </div>

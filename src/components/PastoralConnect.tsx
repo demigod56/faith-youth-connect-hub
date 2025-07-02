@@ -7,12 +7,23 @@ import { MessageCircle, Video, Phone, Calendar, Shield, Heart } from "lucide-rea
 const pastoralTeam = [
   {
     id: "main-pastor",
-    name: "Pastor Michael Johnson",
+    name: "Pastor Ndichu",
     role: "Lead Youth Pastor",
     specialties: ["Leadership", "Vision Casting", "Spiritual Guidance"],
     availability: "Available",
     groups: ["All Groups"],
-    verse: "Be shepherds of God's flock - 1 Peter 5:2"
+    verse: "Be shepherds of God's flock - 1 Peter 5:2",
+    church: "Word of Faith Kiambu"
+  },
+  {
+    id: "teens-pastor",
+    name: "Pastor Benja",
+    role: "Teens Pastor",
+    specialties: ["Teen Ministry", "Discipleship", "Youth Counseling"],
+    availability: "Available",
+    groups: ["Seedlings"],
+    verse: "Don't let anyone look down on you because you are young - 1 Timothy 4:12",
+    church: "Word of Faith Kiambu"
   },
   {
     id: "assistant-pastor-1",
@@ -20,8 +31,9 @@ const pastoralTeam = [
     role: "Assistant Pastor",
     specialties: ["Women's Ministry", "Counseling", "Worship"],
     availability: "Available",
-    groups: ["Seedlings", "RIC Family"],
-    verse: "She speaks with wisdom - Proverbs 31:26"
+    groups: ["RIC Family"],
+    verse: "She speaks with wisdom - Proverbs 31:26",
+    church: "Word of Faith Kiambu"
   },
   {
     id: "assistant-pastor-2", 
@@ -30,7 +42,8 @@ const pastoralTeam = [
     specialties: ["Men's Ministry", "Discipleship", "Missions"],
     availability: "In Session",
     groups: ["Firm Stance", "Pillars & Builders"],
-    verse: "Train up a child in the way he should go - Proverbs 22:6"
+    verse: "Train up a child in the way he should go - Proverbs 22:6",
+    church: "Word of Faith Kiambu"
   }
 ];
 
@@ -67,6 +80,9 @@ const PastoralConnect = () => {
                 <CardDescription className="text-muted-foreground">
                   {pastor.role}
                 </CardDescription>
+                <Badge variant="outline" className="text-xs mt-2">
+                  {pastor.church}
+                </Badge>
                 <div className="flex items-center justify-center">
                   <Badge 
                     variant={pastor.availability === "Available" ? "default" : "secondary"} 
