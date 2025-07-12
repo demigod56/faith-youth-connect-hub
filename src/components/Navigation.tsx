@@ -17,6 +17,31 @@ const Navigation = () => {
             </div>
           </Link>
 
+          {/* Mobile menu - visible on small screens */}
+          <div className="flex md:hidden items-center space-x-1 overflow-x-auto">
+            <Button asChild variant="ghost" size="sm" className="flex-shrink-0">
+              <Link to="/fellowships">
+                <Users className="w-4 h-4" />
+              </Link>
+            </Button>
+            <Button asChild variant="ghost" size="sm" className="flex-shrink-0">
+              <Link to="/forums">
+                <BookOpen className="w-4 h-4" />
+              </Link>
+            </Button>
+            <Button asChild variant="ghost" size="sm" className="flex-shrink-0">
+              <Link to="/events">
+                <Calendar className="w-4 h-4" />
+              </Link>
+            </Button>
+            <Button asChild variant="ghost" size="sm" className="flex-shrink-0">
+              <Link to="/messaging">
+                <MessageCircle className="w-4 h-4" />
+              </Link>
+            </Button>
+          </div>
+
+          {/* Desktop menu - hidden on small screens */}
           <div className="hidden md:flex items-center space-x-2">
             <Button asChild variant="ghost" size="sm">
               <Link to="/fellowships">
@@ -56,7 +81,7 @@ const Navigation = () => {
             </Button>
           </div>
 
-          <div className="flex items-center space-x-2">
+          <div className="hidden md:flex items-center space-x-2">
             <Button asChild variant="outline" size="sm">
               <Link to="/hq-dashboard">HQ Dashboard</Link>
             </Button>
@@ -65,6 +90,11 @@ const Navigation = () => {
             </Button>
             <Button variant="outline" size="sm">Sign In</Button>
             <Button variant="default" size="sm">Join Us</Button>
+          </div>
+
+          {/* Mobile auth buttons */}
+          <div className="flex md:hidden items-center space-x-1">
+            <Button variant="outline" size="sm">Sign In</Button>
           </div>
         </div>
       </div>

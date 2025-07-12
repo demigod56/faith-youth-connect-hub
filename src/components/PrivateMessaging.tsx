@@ -60,23 +60,23 @@ const recentChats = [
 
 const PrivateMessaging = () => {
   return (
-    <section className="py-16 bg-background">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-foreground mb-4">
+    <section className="py-8 md:py-16 bg-background">
+      <div className="container mx-auto px-4 max-w-7xl">
+        <div className="text-center mb-8 md:mb-12">
+          <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
             Sacred <span className="text-primary">Communication</span>
           </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto mb-6">
+          <p className="text-muted-foreground text-base md:text-lg max-w-2xl mx-auto mb-4 md:mb-6 px-2">
             "Let your conversation be always full of grace, seasoned with salt" - Colossians 4:6
           </p>
-          <p className="text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-muted-foreground max-w-3xl mx-auto text-sm md:text-base px-2">
             Connect safely and meaningfully with pastors and fellow believers through 
             our secure, monitored communication platform.
           </p>
         </div>
 
         {/* Messaging Features */}
-        <div className="grid md:grid-cols-3 gap-6 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mb-8 md:mb-12">
           {messagingFeatures.map((feature, index) => {
             const IconComponent = feature.icon;
             return (
@@ -112,7 +112,7 @@ const PrivateMessaging = () => {
         </div>
 
         {/* Recent Conversations */}
-        <div className="grid lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-8">
           <Card className="border-primary/20 bg-card/50 backdrop-blur-sm">
             <CardHeader>
               <CardTitle className="text-foreground flex items-center">
